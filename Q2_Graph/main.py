@@ -97,6 +97,7 @@ while choice != "6":
         for course in courses:
             print(course.course_code, "-", course.course_name)
 
+    # 2. View Course Details
     elif choice == "2":
 
         course_code = input("Enter Course Code: ").strip().upper()
@@ -114,6 +115,7 @@ while choice != "6":
         else:
             print("Course not found.")
 
+    # 3. View Course Prerequisites
     elif choice == "3":
         course_code = input("Enter Course Code: ").strip().upper()
 
@@ -138,6 +140,7 @@ while choice != "6":
         else:
             print("Course not found.")
 
+    # 4. View Courses Unlocked
     elif choice == "4":
 
         course_code = input("Enter Course Code: ").strip().upper()
@@ -163,6 +166,7 @@ while choice != "6":
         else:
             print("Course not found.")
 
+    # 5. Add Course Prerequisite
     elif choice == "5":
         print("\n============== Add Prerequisite =============")
 
@@ -207,6 +211,7 @@ while choice != "6":
         else:
             print("One or both course codes were not found.")
 
+    # 6. Exit
     elif choice == "6":
         print("\nExiting Course Prerequisite System...")
 
