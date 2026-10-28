@@ -81,7 +81,7 @@ sequential_result_35 = None
 sequential_result_38 = None
 sequential_result_40 = None
 
-print("\n============== Sequential Fibonacci Experiment ==============")
+print("\n============= Sequential Fibonacci Experiment =============")
 
 for i in range(repetitions):
     sequential_result_35, sequential_result_38, sequential_result_40, round_time = run_sequential()
@@ -109,7 +109,7 @@ threaded_result_35 = None
 threaded_result_38 = None
 threaded_result_40 = None
 
-print("\n============= Multithreaded Fibonacci Experiment =============")
+print("\n=========== Multithreaded Fibonacci Experiment ===========")
 
 for i in range(repetitions):
     threaded_result_35, threaded_result_38, threaded_result_40, round_time = run_multithreaded()
@@ -128,3 +128,8 @@ print("Fibonacci(38):", threaded_result_38)
 print("Fibonacci(40):", threaded_result_40)
 
 print("\nAverage Multithreaded Time:", average_threaded_time, "nanoseconds")
+
+# Display a summary of the average execution times
+print("\n================= Performance Comparison =================")
+print("Average Sequential Time:", average_sequential_time, "nanoseconds")
+print("Average Multithreaded Time:", average_threaded_time, "nanoseconds")
