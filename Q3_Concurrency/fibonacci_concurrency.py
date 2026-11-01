@@ -89,7 +89,7 @@ for i in range(repetitions):
     # Store the elapsed time for later average calculation
     sequential_times.append(round_time)
 
-    print("Round", i + 1, ":", round_time, "nanoseconds")
+    print("Round", i + 1, ":", f"{round_time:,}", "nanoseconds")
 
 # Calculate the average time for all rounds
 average_sequential_time = sum(sequential_times) / len(sequential_times)
@@ -99,7 +99,7 @@ print("Fibonacci(35):", sequential_result_35)
 print("Fibonacci(38):", sequential_result_38)
 print("Fibonacci(40):", sequential_result_40)
 
-print("\nAverage Sequential Time:", average_sequential_time, "nanoseconds")
+print("\nAverage Sequential Time:", f"{average_sequential_time:,.1f}", "nanoseconds")
 
 # Stores the elapsed time from each multithreaded round
 threaded_times = []
@@ -117,7 +117,7 @@ for i in range(repetitions):
     # Store the elapsed time for later average calculation
     threaded_times.append(round_time)
 
-    print("Round", i + 1, ":", round_time, "nanoseconds")
+    print("Round", i + 1, ":", f"{round_time:,}", "nanoseconds")
 
 # Calculate the average time for all rounds
 average_threaded_time = sum(threaded_times) / len(threaded_times)
@@ -127,9 +127,9 @@ print("Fibonacci(35):", threaded_result_35)
 print("Fibonacci(38):", threaded_result_38)
 print("Fibonacci(40):", threaded_result_40)
 
-print("\nAverage Multithreaded Time:", average_threaded_time, "nanoseconds")
+print("\nAverage Multithreaded Time:", f"{average_threaded_time:,.1f}", "nanoseconds")
 
 # Display a summary of the average execution times
 print("\n================= Performance Comparison =================")
-print("Average Sequential Time:", average_sequential_time, "nanoseconds")
-print("Average Multithreaded Time:", average_threaded_time, "nanoseconds")
+print("Average Sequential Time:", f"{average_sequential_time:,.1f}", "nanoseconds")
+print("Average Multithreaded Time:", f"{average_threaded_time:,.1f}", "nanoseconds")
