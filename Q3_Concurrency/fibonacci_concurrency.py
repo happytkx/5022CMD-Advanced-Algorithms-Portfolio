@@ -129,7 +129,36 @@ print("Fibonacci(40):", threaded_result_40)
 
 print("\nAverage Multithreaded Time:", f"{average_threaded_time:,.1f}", "nanoseconds")
 
+# Calculate the performance difference
+time_difference = abs(average_sequential_time - average_threaded_time)
+
+if average_threaded_time < average_sequential_time:
+    percentage_difference = (time_difference / average_sequential_time) * 100
+    observation = (
+        "Multithreading reduced the average completion time by "
+        + f"{percentage_difference:.2f}%."
+    )
+
+elif average_sequential_time < average_threaded_time:
+    percentage_difference = (time_difference / average_threaded_time) * 100
+    observation = (
+        "Sequential execution reduced the average completion time by "
+        + f"{percentage_difference:.2f}%."
+    )
+
+else:
+    percentage_difference = 0
+    observation = "Both methods recorded the same average completion time."
+
 # Display a summary of the average execution times
 print("\n================= Performance Comparison =================")
-print("Average Sequential Time:", f"{average_sequential_time:,.1f}", "nanoseconds")
-print("Average Multithreaded Time:", f"{average_threaded_time:,.1f}", "nanoseconds")
+print("Average Sequential Time:",
+      f"{average_sequential_time:,.1f}", "nanoseconds")
+print("Average Multithreaded Time:",
+      f"{average_threaded_time:,.1f}", "nanoseconds")
+print("Time Difference:",
+      f"{time_difference:,.1f}", "nanoseconds")
+print("Percentage Difference:",
+      f"{percentage_difference:.2f}%")
+
+print("\nObservation:", observation)
